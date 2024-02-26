@@ -1,5 +1,5 @@
 function Browse() {
-  return <div>Страница просмотра и поиска акций </div>;
+  return <div>Страница просмотра акций </div>;
 }
 
 export default Browse;

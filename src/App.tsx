@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import styles from './App.module.css';
 import Browse from './pages/Browse';
 import Create from './pages/Create';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className={styles.App}>
       <Header />
-      <main>
+      <main style={{ textAlign: 'center', paddingTop: '100px' }}>
         <Routes>
           <Route path='/' element={<News />}></Route>
           <Route path='/browse' element={<Browse />}></Route>
