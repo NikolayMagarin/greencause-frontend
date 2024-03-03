@@ -8,6 +8,8 @@ import { useHorizontalScroll } from '../../utils/useHorizontalScroll';
 import styles from './News.module.css';
 
 import ThemeImage from './images/image.png';
+import AnimalsImage from './images/animals.png';
+import BottomBlock from './components/BottomBlock';
 
 function News() {
   const cardsRef = useHorizontalScroll<HTMLDivElement>();
@@ -42,18 +44,23 @@ function News() {
             <ThemeBlock
               name='Животный мир'
               text='Текст про животный мир'
-              image={ThemeImage}
+              image={AnimalsImage}
             />
+            <hr className={styles.line} />
             <ThemeBlock
+              reverse
               name='Природа'
               text='Текст про природу'
-              image={ThemeImage}
+              image={AnimalsImage}
             />
+            <hr className={styles.line} />
             <ThemeBlock
               name='Погода'
               text='Текст про погоду'
-              image={ThemeImage}
+              image={AnimalsImage}
             />
+            <hr className={styles.line} />
+            <BottomBlock />
           </div>
         </div>
       </main>

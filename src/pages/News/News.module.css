@@ -1,5 +1,5 @@
 .block {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .head {
@@ -20,4 +20,8 @@
 .cards::-webkit-scrollbar {
   -webkit-appearance: none;
   appearance: none;
+}
+
+.line {
+  margin: 30px 65px 60px 65px;
 }
