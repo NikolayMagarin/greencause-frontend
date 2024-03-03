@@ -10,6 +10,7 @@ import styles from './News.module.css';
 import ThemeImage from './images/image.png';
 import AnimalsImage from './images/animals.png';
 import BottomBlock from './components/BottomBlock';
+import Footer from '../../components/Footer';
 
 function News() {
   const cardsRef = useHorizontalScroll<HTMLDivElement>();
@@ -60,9 +61,10 @@ function News() {
               image={AnimalsImage}
             />
             <hr className={styles.line} />
-            <BottomBlock />
           </div>
         </div>
+        <BottomBlock />
+        <Footer />
       </main>
     </>
   );
