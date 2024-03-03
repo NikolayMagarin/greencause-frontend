@@ -79,7 +79,7 @@
   transform: translateY(2px);
 }
 
-input {
+.input {
   background-color: transparent;
   border: none;
 
@@ -92,13 +92,13 @@ input {
   transition: 150ms;
 }
 
-input:focus {
+.input:focus {
   outline: none;
   border-color: #000f;
   border-width: 2px;
 }
 
-input::-webkit-search-cancel-button {
+.input::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
 }

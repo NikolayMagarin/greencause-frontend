@@ -73,6 +73,7 @@ function Header({ navigated }: { navigated?: 'news' | 'browse' | 'create' }) {
           className={styles['search-icon']}
         />
         <input
+          className={styles.input}
           type='search'
           name='search'
           autoComplete={'off'}
