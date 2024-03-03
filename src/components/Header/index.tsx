@@ -6,11 +6,14 @@ import LogoIcon from './images/logo60.png';
 import SearchIcon from './images/search-icon.svg';
 import UserIcon from './images/user-icon.svg';
 
-function Header() {
+function Header({ navigated }: { navigated?: 'news' | 'browse' | 'create' }) {
   const [suggestions, setSuggestions] = useState<Array<string>>([]);
 
   /**
-   * TODO: поставить react-redux и делать запросы на подсказки при вводе
+   * TODO: делать запросы на подсказки при вводе
+   *
+   * А при нажатии на Enter будет переход на другую страницу, которая
+   * и будет осуществлять поиск и отображение
    */
 
   const onSearchSubmit = (value: string) => {
@@ -31,19 +34,31 @@ function Header() {
           GreenCause
         </div>
         <nav className={styles['nav-links']}>
-          <div className={styles['link-wrapper']}>
+          <div
+            className={`${styles['link-wrapper']} ${
+              navigated === 'news' ? styles.navigated : ''
+            }`}
+          >
             <Link to='/' className={styles.link}>
               Главная
             </Link>
             <div className={styles.underline}></div>
           </div>
-          <div className={styles['link-wrapper']}>
+          <div
+            className={`${styles['link-wrapper']} ${
+              navigated === 'create' ? styles.navigated : ''
+            }`}
+          >
             <Link to='/create' className={styles.link}>
               Создать петицию
             </Link>
             <div className={styles.underline}></div>
           </div>
-          <div className={styles['link-wrapper']}>
+          <div
+            className={`${styles['link-wrapper']} ${
+              navigated === 'browse' ? styles.navigated : ''
+            }`}
+          >
             <Link to='/browse' className={styles.link}>
               Посмотреть акции
             </Link>
@@ -65,6 +80,9 @@ function Header() {
             event.code === 'Enter' && onSearchSubmit(event.currentTarget.value);
           }}
           onChange={(event) => onSeacrhChange(event.currentTarget.value)}
+          onSubmit={(event) => {
+            onSearchSubmit(event.currentTarget.value);
+          }}
         />
       </div>
       <div className={styles['account-area']}>

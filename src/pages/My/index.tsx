@@ -1,5 +1,12 @@
+import Header from '../../components/Header';
+
 function My() {
-  return <div>Личный кабинет</div>;
+  return (
+    <>
+      <Header />
+      <div>Личный кабинет</div>
+    </>
+  );
 }
 
 export default My;

@@ -1,5 +1,12 @@
+import Header from '../../components/Header';
+
 function Create() {
-  return <div>Страница создания акции</div>;
+  return (
+    <>
+      <Header navigated='create' />
+      <div>Страница создания акций</div>
+    </>
+  );
 }
 
 export default Create;

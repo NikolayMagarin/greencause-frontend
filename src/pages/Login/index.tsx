@@ -1,5 +1,11 @@
+import Header from '../../components/Header';
+
 function Login() {
-  return <div>Старница авторизации</div>;
+  return (
+    <>
+      <div>Страница авторизации</div>
+    </>
+  );
 }
 
 export default Login;

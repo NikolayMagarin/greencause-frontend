@@ -13,8 +13,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <div className={styles.App}>
-      <Header />
-      <main style={{ textAlign: 'center', paddingTop: '100px' }}>
+      <div>
         <Routes>
           <Route path='/' element={<News />}></Route>
           <Route path='/browse' element={<Browse />}></Route>
@@ -26,7 +25,7 @@ function App() {
 
           <Route path='*' element={<NotFound />}></Route>
         </Routes>
-      </main>
+      </div>
     </div>
   );
 }
